@@ -1,0 +1,249 @@
+/*** MAIN ***/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 10px 0;
+    background: #ccc;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 12pt;
+    color: #222222;
+}
+
+
+/*** DIV SPECIFIC ***/
+
+#wrap {
+    text-align: left;
+    width: 760px;
+    margin: 0 auto;
+    background: #ffffff;
+}
+
+#header {
+    width: 100%;
+    background: #aaaaaa url("/assets/greenheader.jpg") top center no-repeat;
+    /*NOTE: Change "greenheader.jpg" above to "blueheader.jpg", "redheader.jpg",
+        or "brownheader.jpg" to change the color scheme of this page */
+    height: 130px;
+}
+
+#header h1 {
+    color: #ffffff;
+    text-align: right;
+    position: relative;
+    top: 10px;
+    right: 5px;
+    line-height: 50px;
+}
+
+#menu {
+    width: 100%;
+    height: 30px;
+    margin-top: 50px;
+}
+
+#menu ul {
+    list-style: none;
+}
+
+#menu li {
+    float: left;
+}
+
+#menu li a {
+    margin-left: 8px;
+    display: block;
+    padding: 0 5px;
+    color: #ffffff;
+    text-transform: lowercase;
+    text-decoration: none;
+    border-top: 2px solid #ffffff;
+}
+
+#menu li a:hover {
+    border-color: #a0a0a0;
+}
+
+#searchbox {
+    float: right;
+    margin-right: 15px;
+}
+
+#searchbox input {
+    background: #ffffff url('mg.jpg') right no-repeat;
+    border: 1px solid #ccc;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size: 8pt;
+}
+
+.noshow {
+    display: none;
+}
+
+#main {
+    width: 100%;
+    background: #ffffff url('main.jpg') top left repeat-x;
+}
+
+#main h1 {
+    font-size: 20pt;
+    padding-bottom: 22px;
+    color: #000000;
+    background: url('titles.jpg') bottom left no-repeat;
+}
+
+#main h2 {
+    font-size: 14pt;
+    padding-bottom: 9px;
+    margin-bottom: 10px;
+    color: #222222;
+    background: url('titles2.jpg') bottom left no-repeat;
+}
+
+#main h3 {
+    font-size: 12pt;
+    padding-bottom: 9px;
+    margin-bottom: 10px;
+    color: #222222;
+    background: url('titles2.jpg') bottom left no-repeat;
+}
+
+#main a {
+    color: #222222;
+    text-decoration: none;
+    border-bottom: 1px dashed #222222;
+}
+
+#main a:hover {
+    background: #e0e0e0;
+}
+
+#submain {
+    padding: 8px;
+}
+
+#left {
+    float: left;
+    width: 560px;
+    margin-bottom: 5px;
+}
+
+#left p {
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+
+#left ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+#left ul li {
+    margin-bottom: 5px;
+}
+
+#right {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-left: 1px solid #e0e0e0;
+    padding-left: 7px;
+    width: 170px;
+    float: right;
+}
+
+#right p {
+    font-size: 11px;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+#right ul {
+    margin-left: 20px;
+    font-size: 11px;
+}
+
+#right ul li {
+    margin-bottom: 3px;
+}
+
+#footer {
+    clear: both;
+    width: 100%;
+    background: #aaaaaa url('footer.jpg') bottom center no-repeat;
+}
+
+#subfooter {
+    padding: 8px;
+}
+
+#subfooter p {
+    text-align: center;
+    font-size: 11px;
+    color: #ffffff;
+}
+
+#subfooter a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#subfooter a:hover {
+    border-bottom: 1px solid #ffffff;
+}
+
+
+/*** SPECIAL CLASSES & MISC***/
+
+.imgleft,
+.imgright,
+.imgcenter {
+    padding: 3px;
+    border: 1px solid #e0e0e0;
+}
+
+.imgleft {
+    float: left;
+    margin: 5px 15px 5px 0;
+}
+
+.imgright {
+    float: right;
+    margin: 5px 0 5px 15px;
+}
+
+.imgcenter {
+    display: block;
+    margin: 5px auto;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: lowercase;
+}
+
+table {
+    font-size: 13px;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+th {
+    background: #d0d0d0;
+    padding: 5px;
+    border: 1px solid #a0a0a0;
+}
+
+td {
+    vertical-align: top;
+    line-height: 18px;
+    padding: 5px;
+    border: 1px solid #a0a0a0;
+}
