@@ -1,0 +1,58 @@
+<%= form_with url: "/gallery/checkout", method: :post do |f| %>
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :credit_card_no %><br />
+    <%= f.text_field :credit_no %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_expiry %><br />
+    	<select name="check[month]" id="check_out_month">
+		<option selected value="01">Janurary 
+		<option  value="02">Feburary
+		<option  value="03">March
+		<option  value="04">April 
+		<option  value="05">May 
+		<option  value="06">June 
+		<option  value="07">July 
+		<option  value="08">August 
+		<option  value="09">September 
+		<option  value="10">October 
+		<option  value="11">November 
+		<option  value="12">December 
+		</select>
+		<select name="check[year]" id="check_out_year">
+		<option selected value="2013">2013
+		<option  value="2014">2014
+		<option  value="2015">2015
+		<option  value="2016">2016
+        <option  value="2017">2017
+		<option  value="2018">2018
+		<option  value="2019">2019
+		<option  value="2020">2020
+		<option  value="2021">2021
+		<option  value="2022">2022
+		<option  value="2023">2023
+		<option  value="2024">2024
+		<option  value="2025">2025
+        </select>
+    </div>
+    <div class="field">
+        <%= f.label :payment_type %><br />
+        <select name="payment_type"><option value="visa">Visa</option></option><option value="mastercard">Master Card</option></select>
+        </div>
+    <div class="field">
+        <%= f.label :verification_number %><br />
+        <%= f.text_field :verification_number, :size => 2 %>
+    </div>
+    <br/><br/>
+    <div class="actions">
+        <%= f.submit "Submit"%>
+    </div>
+    <% end %>
