@@ -10,45 +10,50 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<%= form_with url: "/gallery/search", local: true,method: :post do |form| %>
+  <%= form.label :query, "Search for:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Search" %>
+<% end %>
 
 
-  <body>      
-    
-      <p class="navbar-text float-right">
-        <% if user_signed_in? %>
-          Logged in as <strong><%= current_user.email %></strong>.
-          <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-        <% else %>
-          <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-        <% end %>
-        </p>
-
-      <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-
-
+  <body> 
     <!-- Header -->
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Music <em>Store</em></h2></a>
+          <a class="navbar-brand" href="/gallery/index.html"><h2>Music <em>Store</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home
+                <a class="nav-link" href="/gallery/index.html">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li> 
-              <li class="nav-item">
+
+             <li class="nav-item active"> 
+              <p class="nav-item active">
+                <% if user_signed_in? %>
+                  Logged in as <strong><%= current_user.email %></strong>.
+                  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+                <% else %>
+                  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+                  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+                <% end %>
+                </p>
+
+              <% if notice %>
+              <p class="alert alert-success"><%= notice %></p>
+            <% end %>
+            <% if alert %>
+              <p class="alert alert-danger"><%= alert %></p>
+            <% end %>
+        </li>
+              <%# <li class="nav-item">
                 <a class="nav-link" href="products.html">Our Products</a>
               </li>
               <li class="nav-item">
@@ -56,7 +61,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
+              </li> %>
                <% if session[:admin]%>
                   Welcome admin
           <li><a style="font-weight:bold" class="nav-link" href="/admin/logout"> Admin Logout</a></li>
@@ -286,10 +291,6 @@
         </div>
       </div>
     </footer>
-
-
-
-
 
   </body>
 </html>

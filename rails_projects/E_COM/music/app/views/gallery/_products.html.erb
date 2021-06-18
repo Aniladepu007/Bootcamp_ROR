@@ -1,0 +1,24 @@
+<table>
+
+<tr>
+<% count=0 %>
+<% if @products %>
+<% @products.each do |product|%>
+
+<% if (count % 3) == 0%>
+</tr>
+<tr>
+<% end %>
+<% count+=1 %>
+<td><%= image_tag product.product_image ,:height=>"100",:width=>"100" %><br />
+Name : <%= product.name %><br />
+Color :<%= product.color %><br />
+Description : <%= product.description %><br />
+Price : <%= product.price %>
+<%= button_to 'Add to Cart', line_items_path(:store_id => product.id)%> </td>
+<% end %>
+</tr>
+<% else %>
+ <p> No products found! </p>
+<% end %>
+</table>

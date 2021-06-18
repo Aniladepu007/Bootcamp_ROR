@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'gallery/index'
+  post 'gallery/index'
   get 'gallery/checkout'
   post 'gallery/checkout'
+  post 'gallery/search'
+  get 'gallery/search'
   get 'gallery/purchase_complete'
   resources :orders
   resources :line_items
